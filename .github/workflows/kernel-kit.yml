@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    if: github.event_name != 'schedule' || (github.repository == 'puppylinux-woof-CE/woof-CE' && github.ref == 'refs/heads/testing')
+    if: github.event_name != 'schedule' || (github.repository == 'peabee-woof-CE/woof-CE' && github.ref == 'refs/heads/crosstest')
     runs-on: ubuntu-20.04
     container:
       image: ${{ matrix.image }}
@@ -54,7 +54,7 @@ jobs:
           path: kernel-kit/small-output
           retention-days: 16
   usrmerge:
-    if: github.event_name != 'schedule' || (github.repository == 'puppylinux-woof-CE/woof-CE' && github.ref == 'refs/heads/testing')
+    if: github.event_name != 'schedule' || (github.repository == 'peabee-woof-CE/woof-CE' && github.ref == 'refs/heads/crosstest')
     needs: build
     runs-on: ubuntu-20.04
     container:
