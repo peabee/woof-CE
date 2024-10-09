@@ -822,7 +822,7 @@ if [ "$AUFS" != "no" ] ; then
 	export CPPFLAGS="-I $LinuxSrc/usr/include"
 	
 	if [ -n "$SET_MAKE_COMMAND" ]; then
-		export CC="gcc"
+		export CC="gcc -m32"
 #		OLDPATH=$PATH
 #		export PATH="${MWD}/tools/${tools_git_dir}/arm-linux-gnueabihf/bin:$PATH" # for strip
 #		ECHO='CC=\"arm-linux-gnueabihf-gcc\"'
